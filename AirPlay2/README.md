@@ -1,6 +1,8 @@
 Script to install Airplay2 on piCorePlayer OS
 
-Login to PiCorePlayer using ssh, default login: tc password: piCore
+1. Switch the Shairport-sync to "Yes" at Tweaks Page
+
+2. Login to PiCorePlayer using ssh, default login: tc password: piCore
 
 run:
 
