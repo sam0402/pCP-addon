@@ -23,4 +23,4 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium
 
 echo "Rebooting..."
 sleep 3
-# pcp br
+pcp br
