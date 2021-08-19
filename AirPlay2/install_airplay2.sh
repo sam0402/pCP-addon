@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz.md5.txt
 
-tce-load -i -w pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz
+sudo -u tc tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz
 
 echo "Rebooting..."
 sleep 3
