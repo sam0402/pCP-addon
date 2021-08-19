@@ -6,15 +6,15 @@ Login to PiCorePlayer using ssh, default login: tc  password: piCore
 
 To install, run:
 
-`wget -O - https://raw.githubusercontent.com/sam0402/picoreplayer-roonbridge/master/install-roonbridge.sh | sudo sh`
+`wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/roonbridge/install-roonbridge.sh | sudo sh`
 
 To install armv8 version, run:
 
-`wget -O - https://raw.githubusercontent.com/sam0402/picoreplayer-roonbridge/master/install-roonbridge_v8.sh | sudo sh`
+`wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/roonbridge/install-roonbridge_v8.sh | sudo sh`
 
 To uninstall, run:
 
-`wget -O - https://raw.githubusercontent.com/sam0402/picoreplayer-roonbridge/master/uninstall-roonbridge.sh | sudo sh`
+`wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/roonbridge/uninstall-roonbridge.sh | sudo sh`
 
 Reboot after install or uninstall, enjoy!
 
