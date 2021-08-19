@@ -1,0 +1,9 @@
+libasound.tcz
+openssl.tcz
+pcp-libsoxr.tcz
+pcp-libalac.tcz
+libgcrypt.tcz 
+libsodium.tcz
+libplist.tcz
+libconfig_popt.tcz
+libdaemon.tcz
