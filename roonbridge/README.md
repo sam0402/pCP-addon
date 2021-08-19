@@ -1,4 +1,4 @@
-# picoreplayer-roonbridge
+# piCorePlayer RoonBridge
 
 Script to install RoonBridge on recent PiCorePlayer OS
 
