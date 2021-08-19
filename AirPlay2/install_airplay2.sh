@@ -6,6 +6,9 @@
 
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
+
+sudo -u tc tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz
+
 cd /mnt/$TARGET/optional
 rm pcp-shairportsync.tcz*
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz
@@ -17,8 +20,6 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz.md5.txt
-
-sudo -u tc tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz
 
 echo "Rebooting..."
 sleep 3
