@@ -30,7 +30,7 @@ $ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/Album_Play
 
 for pCP8
 
-`wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/Album_Player/install_aprenderer_arm64.sh | sudo sh`
+$ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/Album_Player/install_aprenderer_arm64.sh | sudo sh`
 
 Album Player and Renderer will be installed after auto reboot.
 
