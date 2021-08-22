@@ -7,8 +7,8 @@
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
 
-rm pcp-shairportsync.tcz*
 sudo -u tc tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz libgcrypt.tcz pcp-libsoxr.tcz
+rm pcp-shairportsync.tcz*
 
 cd /mnt/$TARGET/optional
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz
