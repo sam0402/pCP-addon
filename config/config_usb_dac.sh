@@ -13,4 +13,4 @@ cd optional
 echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
 echo "Rebooting..."
 sleep 2
-pcp br
+pcp rb
