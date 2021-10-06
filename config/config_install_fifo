@@ -11,6 +11,7 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/mydata8_fif
 mv mydata8_fifo.tgz mydata.tgz
 ln -s /mnt/$TARGET/tce/squeezelite-pcm squeezelite
 sed -i '/rpi-vc.tcz/d' onboot.lst
+sed -i '/ntfs-3g.tcz/d' onboot.lst
 cd optional
 sed -i '/rng-tools.tcz/d' pcp.tcz.dep
 echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
