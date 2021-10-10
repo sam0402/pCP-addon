@@ -30,4 +30,4 @@ EOL
 
 echo "Rebooting..."
 sleep 2
-pcp rb
+pcp br
