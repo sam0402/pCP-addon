@@ -11,6 +11,7 @@ sed -i '/rpi-vc.tcz/d' onboot.lst
 sed -i '/ntfs-3g.tcz/d' onboot.lst
 cd optional
 sed -i '/rng-tools.tcz/d' pcp.tcz.dep
+sed -i '/dialog.tcz/d' pcp.tcz.dep
 echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
 
 NUM=`grep -c 'taskset' /opt/bootlocal.sh`
@@ -30,7 +31,6 @@ umount /tmp/tcloop/openssl
 umount /tmp/tcloop/alsa-utils
 umount /tmp/tcloop/ca-certificate
 umount /tmp/tcloop/ncurses
-umount /tmp/tcloop/dialog
 EOL
 fi
 echo "Rebooting..."
