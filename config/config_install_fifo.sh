@@ -8,7 +8,7 @@ TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/mydata8_fifo.tgz
 mv mydata8_fifo.tgz mydata.tgz
-ln -s /mnt/$TARGET/tce/squeezelite-dsd squeezelite
+ln -s /mnt/$TARGET/tce/squeezelite-pcm squeezelite
 sed -i '/rpi-vc.tcz/d' onboot.lst
 sed -i '/ntfs-3g.tcz/d' onboot.lst
 cd optional
