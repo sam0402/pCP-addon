@@ -16,6 +16,7 @@ echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
 cat << 'EOL' >> /opt/bootlocal.sh
 sleep 30
 taskset -p 0x00000008 $(pgrep squeezelite*)
+pkill -f udhcpc
 sleep 60
 umount /tmp/tcloop/uhubctl
 umount /tmp/tcloop/libusb
