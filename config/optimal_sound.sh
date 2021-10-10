@@ -14,8 +14,7 @@ sed -i '/rng-tools.tcz/d' pcp.tcz.dep
 sed -i '/dialog.tcz/d' pcp.tcz.dep
 echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
 
-NUM=`grep -c 'taskset' /opt/bootlocal.sh`
-if [ $NUM -eq 0 ]
+if [ `grep -c 'taskset' /opt/bootlocal.sh` -eq 0 ]
 then
   cat << 'EOL' >> /opt/bootlocal.sh
 
