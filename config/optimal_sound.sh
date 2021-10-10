@@ -12,10 +12,11 @@ sed -i '/ntfs-3g.tcz/d' onboot.lst
 cd optional
 sed -i '/rng-tools.tcz/d' pcp.tcz.dep
 echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
-echo >> /opt/bootlocal.sh <<EOL
+
+cat << 'EOL' >> /opt/bootlocal.sh
 sleep 30
 sudo taskset -p 0x00000008 $(pgrep squeezelite*)
-sleep 300
+sleep 270
 sudo umount /tmp/tcloop/openssh
 sudo umount /tmp/tcloop/openssl
 sudo umount /tmp/tcloop/uhubctl
