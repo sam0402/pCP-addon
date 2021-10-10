@@ -12,6 +12,21 @@ sed -i '/ntfs-3g.tcz/d' onboot.lst
 cd optional
 sed -i '/rng-tools.tcz/d' pcp.tcz.dep
 echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
+echo >> /opt/bootlocal.sh <<EOL
+sleep 30
+sudo taskset -p 0x00000008 $(pgrep squeezelite*)
+sleep 300
+sudo umount /tmp/tcloop/openssh
+sudo umount /tmp/tcloop/openssl
+sudo umount /tmp/tcloop/uhubctl
+sudo umount /tmp/tcloop/libusb
+sudo umount /tmp/tcloop/libudev
+sudo umount /tmp/tcloop/alsa-utils
+sudo umount /tmp/tcloop/ca-certificate
+sudo umount /tmp/tcloop/ncurses
+sudo umount /tmp/tcloop/dialog
+EOL
+
 echo "Rebooting..."
 sleep 2
 pcp rb
