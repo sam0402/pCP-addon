@@ -19,14 +19,14 @@ if [ $NUM -eq 0 ]
 then
   cat << 'EOL' >> /opt/bootlocal.sh
 
-sleep 30
+sleep 20
 taskset -p 0x00000008 $(pgrep squeezelite*)
 pkill -f udhcpc
 sleep 60
 umount /tmp/tcloop/uhubctl
 umount /tmp/tcloop/libusb
 umount /tmp/tcloop/libudev
-sleep 210
+sleep 180
 umount /tmp/tcloop/alsa-utils
 umount /tmp/tcloop/ncurses
 [ `ps | grep -c 'sshd: tc'` -lt 3 ] && pkill -f ssh
