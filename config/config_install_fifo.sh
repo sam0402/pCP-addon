@@ -1,4 +1,3 @@
-
 #!/bin/busybox ash
 
 . /etc/init.d/tc-functions
