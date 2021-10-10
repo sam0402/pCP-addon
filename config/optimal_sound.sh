@@ -19,7 +19,7 @@ if [ $NUM -eq 0 ]
 then
   cat << 'EOL' >> /opt/bootlocal.sh
 
-# Add by Sam0402
+#--- Add by Sam0402
 sleep 20
 taskset -p 0x00000008 $(pgrep squeezelite*)
 pkill -f udhcpc
@@ -29,11 +29,11 @@ umount /tmp/tcloop/libusb
 umount /tmp/tcloop/libudev
 sleep 90
 umount /tmp/tcloop/alsa-utils
-＃umount /tmp/tcloop/ncurses
+umount /tmp/tcloop/ncurses
 [ `ps | grep -c 'sshd: tc'` -lt 3 ] && pkill -f ssh
 umount /tmp/tcloop/ca-certificates
 umount /tmp/tcloop/openssh
-umount /tmp/tcloop/openssl
+＃umount /tmp/tcloop/openssl
 EOL
 fi
 echo "Rebooting..."
