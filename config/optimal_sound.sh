@@ -30,7 +30,7 @@ sleep 210
 umount /tmp/tcloop/openssh
 umount /tmp/tcloop/openssl
 umount /tmp/tcloop/alsa-utils
-umount /tmp/tcloop/ca-certificate
+umount /tmp/tcloop/ca-certificates
 umount /tmp/tcloop/ncurses
 EOL
 fi
