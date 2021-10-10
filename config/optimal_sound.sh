@@ -16,12 +16,13 @@ echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
 cat << 'EOL' >> /opt/bootlocal.sh
 sleep 30
 sudo taskset -p 0x00000008 $(pgrep squeezelite*)
-sleep 270
-sudo umount /tmp/tcloop/openssh
-sudo umount /tmp/tcloop/openssl
+sleep 60
 sudo umount /tmp/tcloop/uhubctl
 sudo umount /tmp/tcloop/libusb
 sudo umount /tmp/tcloop/libudev
+sleep 210
+sudo umount /tmp/tcloop/openssh
+sudo umount /tmp/tcloop/openssl
 sudo umount /tmp/tcloop/alsa-utils
 sudo umount /tmp/tcloop/ca-certificate
 sudo umount /tmp/tcloop/ncurses
