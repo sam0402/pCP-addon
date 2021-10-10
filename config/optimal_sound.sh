@@ -34,6 +34,7 @@ umount /tmp/tcloop/ncurses
 umount /tmp/tcloop/ca-certificates
 umount /tmp/tcloop/openssh
 ＃umount /tmp/tcloop/openssl
+#--- Add by Sam0402
 EOL
 fi
 echo "Rebooting..."
