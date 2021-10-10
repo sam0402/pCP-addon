@@ -32,7 +32,6 @@ umount /tmp/tcloop/ncurses
 [ `ps | grep -c 'sshd: tc'` -lt 3 ] && pkill -f ssh
 umount /tmp/tcloop/ca-certificates
 umount /tmp/tcloop/openssh
-# umount /tmp/tcloop/openssl
 #--- Add by Sam0402
 EOL
 fi
