@@ -18,6 +18,7 @@ NUM=`grep -c 'taskset' /opt/bootlocal.sh`
 if [ $NUM -eq 0 ]
 then
   cat << 'EOL' >> /opt/bootlocal.sh
+
 sleep 30
 taskset -p 0x00000008 $(pgrep squeezelite*)
 pkill -f udhcpc
