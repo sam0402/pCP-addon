@@ -19,6 +19,7 @@ echo 'libasound2.tcz' >pcp-squeezelite.tcz.dep
 if [ `grep -c 'taskset' /opt/bootlocal.sh` -eq 0 ]
 then
   cat << 'EOL' >> /opt/bootlocal.sh
+
 #--- Add by Sam0402
 sleep 20
 taskset -p 0x00000008 $(pgrep squeezelite*)
