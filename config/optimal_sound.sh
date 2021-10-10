@@ -26,7 +26,7 @@ umount /tmp/tcloop/uhubctl
 umount /tmp/tcloop/libusb
 umount /tmp/tcloop/libudev
 sleep 210
-pkill -f ssh
+[ `ps | grep -c 'sshd: tc'` -eq 0 ] && pkill -f ssh
 umount /tmp/tcloop/openssh
 umount /tmp/tcloop/openssl
 umount /tmp/tcloop/alsa-utils
