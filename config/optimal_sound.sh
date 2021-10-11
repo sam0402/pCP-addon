@@ -28,10 +28,8 @@ umount /tmp/tcloop/libusb
 umount /tmp/tcloop/libudev
 umount /tmp/tcloop/ncurses
 umount /tmp/tcloop/alsa-utils
-sleep 90
-[ `ps | grep -c 'sshd: tc'` -lt 3 ] && pkill -f ssh
-umount /tmp/tcloop/ca-certificates
-umount /tmp/tcloop/openssh
+pcp_write_var_to_config USER_COMMAND_1 "%23sleep+60%3b+uhubctl+-l+1-1+-a+0%3bsleep+120%3bpkill+-f+httpd%3bumount+%2ftmp%2ftcloop%2fpcp-8.0.0-www"
+pcp_write_var_to_config USER_COMMAND_2 "%23sleep+90%3b%5b+%60ps+%7c+grep+-c+%27sshd%3a+tc%27%60+-lt+3+%5d+%26%26+(pkill+-f+ssh%3bumount+%2ftmp%2ftcloop%2fca-certificates%3bumount+%2ftmp%2ftcloop%2fopenssh)"
 #--- Add by Sam0402
 EOL
 fi
