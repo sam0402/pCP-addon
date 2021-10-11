@@ -25,11 +25,8 @@ sleep 20
 taskset -p 0x00000008 $(pgrep squeezelite*)
 pkill -f udhcpc
 sleep 60
-umount /tmp/tcloop/uhubctl
-umount /tmp/tcloop/libusb
-umount /tmp/tcloop/libudev
-umount /tmp/tcloop/ncurses
-umount /tmp/tcloop/alsa-utils
+umount /tmp/tcloop/uhubctl /tmp/tcloop/libusb /tmp/tcloop/libudev
+umount /tmp/tcloop/ncurses /tmp/tcloop/alsa-utils
 #--- Add by Sam0402
 EOL
 fi
