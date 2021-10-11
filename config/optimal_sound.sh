@@ -17,6 +17,7 @@ pcp_write_var_to_config USER_COMMAND_1 "%23sleep+60%3b+uhubctl+-l+1-1+-a+0%3bsle
 pcp_write_var_to_config USER_COMMAND_2 "%23sleep+90%3b%5b+%60ps+%7c+grep+-c+%27sshd%3a+tc%27%60+-lt+3+%5d+%26%26+(pkill+-f+ssh%3bumount+%2ftmp%2ftcloop%2fca-certificates%3bumount+%2ftmp%2ftcloop%2fopenssh)"
 if [ `grep -c 'taskset' /opt/bootlocal.sh` -eq 0 ]
 then
+  sed -i '11,$d' /opt/bootlocal.sh
   cat << 'EOL' >> /opt/bootlocal.sh
 
 #--- Add by Sam0402
