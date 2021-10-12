@@ -20,10 +20,8 @@ then
   cat << 'EOL' >> /opt/bootlocal.sh
 
 #--- Add by Sam0402
-sleep 20
 taskset -p 0x00000008 $(pgrep squeezelite*)
 pkill -f udhcpc
-sleep 60
 umount /tmp/tcloop/uhubctl /tmp/tcloop/libusb /tmp/tcloop/libudev
 umount /tmp/tcloop/ncurses /tmp/tcloop/alsa-utils /tmp/tcloop/ca-certificates
 #--- Add by Sam0402
