@@ -5,7 +5,7 @@
 
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
-cd /mnt/$TARGET
+cd /mnt/$TARGET/tce
 echo naa.tcz >>onboot.lst
 cd optional
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/naa.tcz
