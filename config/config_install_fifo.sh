@@ -6,7 +6,7 @@
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
-sudo -u tc tce-load -i ca-certificates.tcz
+tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/mydata8_fifo.tgz
 mv mydata8_fifo.tgz mydata.tgz
 ln -s /mnt/$TARGET/tce/squeezelite-pcm squeezelite
