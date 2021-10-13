@@ -8,7 +8,7 @@ TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
 echo cdrom-KERNEL.tcz >>onboot.lst
 cd optional
-sudo -u tc tce-load -i ca-certificates.tcz
+tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pcp-44.1KHz/master/cdrom-5.13.1-pcpEVL_44k.tcz
 wget https://raw.githubusercontent.com/sam0402/pcp-44.1KHz/master/cdrom-5.13.1-pcpEVL_44k.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pcp-44.1KHz/master/cdrom-5.13.1-pcpEVL_48k.tcz
