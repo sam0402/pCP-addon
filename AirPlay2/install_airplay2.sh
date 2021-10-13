@@ -6,7 +6,7 @@
 
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
-
+sudo -u tc tce-load -i ca-certificates.tcz
 sudo -u tc tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz libgcrypt.tcz pcp-libsoxr.tcz
 
 cd /mnt/$TARGET/optional; rm pcp-shairportsync.tcz*
