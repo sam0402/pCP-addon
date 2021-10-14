@@ -6,6 +6,7 @@
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
+sed -i '/cdrom-KERNEL.tcz/d' onboot.lst
 echo cdrom-KERNEL.tcz >>onboot.lst
 cd optional
 tce-load -i ca-certificates.tcz
