@@ -6,6 +6,7 @@
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
+sed -i '/pcp-aplayer_render.tcz/d' onboot.lst
 echo pcp-aplayer_render.tcz >>onboot.lst
 cd optional
 tce-load -i ca-certificates.tcz
