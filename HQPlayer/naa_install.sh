@@ -11,7 +11,7 @@ cd optional
 tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/naa.tcz
 
-pcp_write_var_to_config USER_COMMAND_3 "(%2fusr%2fsbin%2fnetworkaudiod+%26)%3b+taskset+-p+0x00000008+%24(pgrep+networkaudiod*)"
+pcp_write_var_to_config USER_COMMAND_3 "(networkaudiod+%26)%3b+taskset+-p+0x00000008+%24(pgrep+networkaudiod*)"
 echo "Rebooting..."
 sleep 3
 pcp br
