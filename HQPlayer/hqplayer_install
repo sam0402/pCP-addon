@@ -7,10 +7,10 @@ useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
 sed -i '/hqplayer.tcz/d' onboot.lst
-echo hqplayer_4252.tcz >>onboot.lst
+echo hqplayer.tcz >>onboot.lst
 cd optional
 tce-load -i ca-certificates.tcz
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer_4252.tcz
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer.tcz
 #echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
 touch ~/library.xml
 mkdir -p ~/.config/Rygel
