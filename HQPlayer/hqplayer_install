@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer.
 sed -i '/ldconfig/d' /opt/bootlocal.sh
 echo ldconfig >> /opt/bootlocal.sh
 
-pcp_write_var_to_config USER_COMMAND_3 "(hqplayerd &);taskset -p 0x00000008 $(pgrep hqplayerd*)"
+pcp_write_var_to_config USER_COMMAND_3 "(hqplayerd+%26)%3btaskset+-p+0x00000008+%24(pgrep+hqplayerd*)"
 echo "Rebooting..."
 sleep 3
 pcp br
