@@ -1,0 +1,1 @@
+8880e32dcceb6c87a27468c8bba7e967  alsa-modules-5.13.1-pcpEVL.tcz

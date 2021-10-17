@@ -1,0 +1,88 @@
+# For more options and information see
+# http://rpf.io/configtxt
+# Some settings may impact device functionality. See link above for details
+
+# RPi PI0-1-2 are not supported on this image.
+
+[CM4]
+initramfs rootfs-pCP64-13.0.gz,modules-5.13.1-pcpEVL.gz followkernel
+kernel kernel5131v8.img
+arm_64bit=1
+otg_mode=1
+
+[ALL]
+
+cmdline cmdline.txt
+
+# uncomment if you get no picture on HDMI for a default "safe" mode
+#hdmi_safe=1
+
+# uncomment this if your display has a black border of unused pixels visible
+# and your display can output without overscan
+#disable_overscan=1
+
+# uncomment the following to adjust overscan. Use positive numbers if console
+# goes off screen, and negative if there is too much border
+#overscan_left=16
+#overscan_right=16
+#overscan_top=16
+#overscan_bottom=16
+
+# uncomment to force a console size. By default it will be display's size minus
+# overscan.
+#framebuffer_width=1280
+#framebuffer_height=720
+
+# uncomment if hdmi display is not detected and composite is being output
+
+# uncomment to force a specific HDMI mode (this will force VGA)
+#hdmi_group=1
+#hdmi_mode=1
+
+# uncomment to force a HDMI mode rather than DVI. This can make audio work in
+# DMT (computer monitor) modes
+
+# uncomment to increase signal to HDMI, if you have interference, blanking, or
+# no display
+#config_hdmi_boost=4
+
+# uncomment for composite PAL
+#sdtv_mode=2
+
+#----------------------------------------------------
+dtparam=i2c_arm=on,spi=on,i2s=on
+
+#---pCP----------------------------------------------
+# pCP does not use graphics chip by default, free up most memory
+gpu_mem=16
+initial_turbo=60
+disable_pvt=1
+
+# onboard audio overlay
+dtparam=audio=on
+audio_pwm_mode=2
+
+#Disable Bluetooth on both rpi3 and rpi0W
+dtoverlay=disable-bt
+
+# uncomment to overclock the arm. 700 MHz is the default.
+#arm_freq=
+#gpu_freq=
+#core_freq=
+#sdram_freq=
+#over_voltage=
+#force_turbo=
+
+# Remove audio hiss
+# disable_audio_dither=1
+
+#If booting from USB or network, enable this option to reduce CPU load looking for a non-existing card.
+#dtparam=sd_poll_once
+
+# Screen rotation 0 => 0 degrees, 2 => 180 degrees
+lcd_rotate=2
+
+#Custom Configuration Area, for config settings that are not managed by pCP.
+#pCP will retain these settings during insitu-update
+#---Begin-Custom-(Do not alter Begin or End Tags)-----
+#---End-Custom----------------------------------------
