@@ -11,6 +11,7 @@ echo hqplayer_4252.tcz >>onboot.lst
 cd optional
 tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer_4252.tcz
+echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
 tce-load -wi rygel.tcz gupnp.tcz
 
 sed -i '/ldconfig/d' /opt/bootlocal.sh
