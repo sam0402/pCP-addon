@@ -12,10 +12,10 @@ cd optional
 tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer_4252.tcz
 echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
-tce-load -wi rygel.tcz gupnp.tcz
+tce-load -wi rygel.tcz gupnp.tcz gsettings-desktop-schemas.tcz
 
 sed -i '/ldconfig/d' /opt/bootlocal.sh
-echo ldconfig >> /opt/bootlocal.sh
+echo 'sudo ldconfig' >> /opt/bootlocal.sh
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
 pcp_write_var_to_config USER_COMMAND_3 "(hqplayerd+%26)%3btaskset+-p+0x00000008+%24(pgrep+hqplayerd*)"
