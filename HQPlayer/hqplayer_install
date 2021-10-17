@@ -12,11 +12,11 @@ cd optional
 tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer_4252.tcz
 #echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
-#tce-load -wi rygel.tcz gsettings-desktop-schemas.tcz
 touch ~/library.xml
 mkdir -p ~/.config/Rygel
 cd ~/.config/Rygel
-wget 
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/LibRygelRenderer.xml
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/LibRygelRenderer-v1.xml
 
 sed -i '/ldconfig/d' /opt/bootlocal.sh
 echo 'sudo ldconfig' >> /opt/bootlocal.sh
