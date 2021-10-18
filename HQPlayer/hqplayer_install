@@ -13,7 +13,7 @@ tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer.tcz
 echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
 sed -i '/ldconfig/d' /opt/bootlocal.sh
-echo 'sudo ldconfig' >> /opt/bootlocal.sh
+echo 'ldconfig' >> /opt/bootlocal.sh
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
 #wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/library.xml
