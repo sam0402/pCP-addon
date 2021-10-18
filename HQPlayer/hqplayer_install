@@ -20,7 +20,7 @@ mkdir -p ~/hqplayer/udev/rules.d
 cd ~/hqplayer
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd.xml
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd-auth.xml
-pcp_write_var_to_config USER_COMMAND_3 "(hqplayerd+%26)%3btaskset+-p+0x00000008+%24(pgrep+hqplayerd*)"
+pcp_write_var_to_config USER_COMMAND_3 "(cd+%7e%3bhqplayerd%26)%3btaskset+-p+0x00000008+%24(pgrep+hqplayerd*)"
 echo "Rebooting..."
 sleep 3
 pcp br
