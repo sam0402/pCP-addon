@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<output type="network"/>
+	<pcm dither="0" filter="0" filter1x="0" samplerate="44100"/>
+	<sdm bitrate="0" modulator="6" oversampling="8" oversampling1x="22"/>
+	<mode value="pcm"/>
+	<title value="HQPlayerEmbedded"/>
+	<web css="default.css" port="8088"/>
+	<log enabled="1" file="/tmp/hqplayerd.log"/>
+	<engine auto_family="1" cd_drive="/dev/cdrom" channels="2" cuda="1" direct_sdm="0" dsd_6db="1" fft_size="512" multicore="auto" pdm_conv="8" pdm_filt="0" quick_pause="0" removable="/media" rocm="1" sdm_conversion="0" sdm_integrator="0" short_buffer="0" volume_adaptive="0" volume_hw="0" volume_max="0" volume_min="-60" volume_scaler="0.75">
+		<defaults bitrate="11289600" samplerate="768000" volume="-3"/>
+		<alsa any_dsd="0" channel_offset="0" dac_bits="24" device="hw:0,0" dualwire="0" pack_sdm="0" period_time="100" volume_element="Master"/>
+		<network address="pCP" any_dsd="0" dac_bits="0" device="hw:CARD=Hugo2,DEV=0" dualwire="0" friendly_name="pCP: Hugo2: USB Audio" ipv6="0" pack_sdm="0" period_time="0"/>
+		<input channels="2" device="uac2" format="auto" name="USB Audio Class 2" pack_sdm="1" period_time="100" type="uac2"/>
+		<input channels="2" device="hw:CARD=USBStreamer,DEV=0" name="USBStreamer @44.1k" nperiods="4" period_time="100" post_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP TOSLINK Clock&apos;" pre_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP Internal Clock&apos;" samplerate="44100"/>
+		<input channels="2" device="hw:CARD=USBStreamer,DEV=0" name="USBStreamer @48k" nperiods="4" period_time="100" post_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP TOSLINK Clock&apos;" pre_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP Internal Clock&apos;" samplerate="48000"/>
+		<input channels="2" device="hw:CARD=USBStreamer,DEV=0" name="USBStreamer @88.2k" nperiods="4" period_time="100" post_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP TOSLINK Clock&apos;" pre_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP Internal Clock&apos;" samplerate="88200"/>
+		<input channels="2" device="hw:CARD=USBStreamer,DEV=0" name="USBStreamer @96k" nperiods="4" period_time="100" post_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP TOSLINK Clock&apos;" pre_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP Internal Clock&apos;" samplerate="96000"/>
+		<input channels="2" device="hw:CARD=USBStreamer,DEV=0" format="auto" name="USBStreamer @176.4k" nperiods="4" pack_sdm="1" period_time="100" post_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP TOSLINK Clock&apos;" pre_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP Internal Clock&apos;" samplerate="176400"/>
+		<input channels="2" device="hw:CARD=USBStreamer,DEV=0" format="auto" name="USBStreamer @192k" nperiods="4" pack_sdm="1" period_time="100" post_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP TOSLINK Clock&apos;" pre_script="amixer -D hw:CARD=USBStreamer sset &apos;miniDSP Clock Selector Clock Source&apos; &apos;miniDSP Internal Clock&apos;" samplerate="192000"/>
+		<input channels="2" device="hw:CARD=M20,DEV=0" name="Mutec MC-1.2 @44.1k" nperiods="4" period_time="100" samplerate="44100"/>
+		<input channels="2" device="hw:CARD=M20,DEV=0" name="Mutec MC-1.2 @48k" nperiods="4" period_time="100" samplerate="48000"/>
+		<input channels="2" device="hw:CARD=M20,DEV=0" name="Mutec MC-1.2 @88.2k" nperiods="4" period_time="100" samplerate="88200"/>
+		<input channels="2" device="hw:CARD=M20,DEV=0" name="Mutec MC-1.2 @96k" nperiods="4" period_time="100" samplerate="96000"/>
+		<input channels="2" device="hw:CARD=M20,DEV=0" format="auto" name="Mutec MC-1.2 @176.4k" nperiods="4" pack_sdm="1" period_time="100" samplerate="176400"/>
+		<input channels="2" device="hw:CARD=M20,DEV=0" format="auto" name="Mutec MC-1.2 @192k" nperiods="4" pack_sdm="1" period_time="100" samplerate="192000"/>
+		<matrix_profile name="Default">
+			<pipeline channel="0" gain="0.00" mixdown="0" process="" source="0"/>
+			<pipeline channel="1" gain="0.00" mixdown="1" process="" source="1"/>
+			<pipeline channel="2" gain="0.00" mixdown="2" process="" source="2"/>
+			<pipeline channel="3" gain="0.00" mixdown="3" process="" source="4"/>
+			<pipeline channel="4" gain="0.00" mixdown="4" process="" source="5"/>
+			<pipeline channel="5" gain="0.00" mixdown="5" process="" source="6"/>
+			<pipeline channel="6" gain="0.00" mixdown="6" process="" source="7"/>
+			<pipeline channel="7" gain="0.00" mixdown="7" process="" source="8"/>
+			<pipeline channel="8" gain="0.00" mixdown="8" process="" source="8"/>
+			<pipeline channel="9" gain="0.00" mixdown="9" process="" source="9"/>
+			<pipeline channel="10" gain="0.00" mixdown="10" process="" source="10"/>
+			<pipeline channel="11" gain="0.00" mixdown="11" process="" source="11"/>
+			<pipeline channel="12" gain="0.00" mixdown="12" process="" source="12"/>
+			<pipeline channel="13" gain="0.00" mixdown="13" process="" source="13"/>
+			<pipeline channel="14" gain="0.00" mixdown="14" process="" source="14"/>
+			<pipeline channel="15" gain="0.00" mixdown="15" process="" source="15"/>
+			<pipeline channel="16" gain="0.00" mixdown="16" process="" source="16"/>
+			<pipeline channel="17" gain="0.00" mixdown="17" process="" source="17"/>
+			<pipeline channel="18" gain="0.00" mixdown="18" process="" source="18"/>
+			<pipeline channel="19" gain="0.00" mixdown="19" process="" source="19"/>
+			<pipeline channel="20" gain="0.00" mixdown="20" process="" source="20"/>
+			<pipeline channel="21" gain="0.00" mixdown="21" process="" source="21"/>
+			<pipeline channel="22" gain="0.00" mixdown="22" process="" source="22"/>
+			<pipeline channel="23" gain="0.00" mixdown="23" process="" source="23"/>
+			<pipeline channel="24" gain="0.00" mixdown="24" process="" source="24"/>
+			<pipeline channel="25" gain="0.00" mixdown="25" process="" source="25"/>
+			<pipeline channel="26" gain="0.00" mixdown="26" process="" source="26"/>
+			<pipeline channel="27" gain="0.00" mixdown="27" process="" source="27"/>
+			<pipeline channel="28" gain="0.00" mixdown="28" process="" source="28"/>
+			<pipeline channel="29" gain="0.00" mixdown="29" process="" source="29"/>
+			<pipeline channel="30" gain="0.00" mixdown="30" process="" source="30"/>
+			<pipeline channel="31" gain="0.00" mixdown="31" process="" source="31"/>
+		</matrix_profile>
+		<matrix_profile name="Mch-to-Stereo mixdown">
+			<pipeline channel="0" gain="-7.8" mixdown="0" process="" source="0"/>
+			<pipeline channel="1" gain="-7.8" mixdown="1" process="" source="1"/>
+			<pipeline channel="2" gain="-12.6" mixdown="0" process="" source="2"/>
+			<pipeline channel="3" gain="-12.6" mixdown="1" process="" source="2"/>
+			<pipeline channel="4" gain="-13.8" mixdown="0" process="" source="4"/>
+			<pipeline channel="5" gain="-13.8" mixdown="1" process="" source="5"/>
+			<pipeline channel="6" gain="-2.6" mixdown="0" process="" source="3"/>
+			<pipeline channel="7" gain="-2.6" mixdown="1" process="" source="3"/>
+			<pipeline channel="8" gain="0" mixdown="8" process="" source="8"/>
+			<pipeline channel="9" gain="0" mixdown="9" process="" source="9"/>
+			<pipeline channel="10" gain="0" mixdown="10" process="" source="10"/>
+			<pipeline channel="11" gain="0" mixdown="11" process="" source="11"/>
+			<pipeline channel="12" gain="0" mixdown="12" process="" source="12"/>
+			<pipeline channel="13" gain="0" mixdown="13" process="" source="13"/>
+			<pipeline channel="14" gain="0" mixdown="14" process="" source="14"/>
+			<pipeline channel="15" gain="0" mixdown="15" process="" source="15"/>
+			<pipeline channel="16" gain="0" mixdown="16" process="" source="16"/>
+			<pipeline channel="17" gain="0" mixdown="17" process="" source="17"/>
+			<pipeline channel="18" gain="0" mixdown="18" process="" source="18"/>
+			<pipeline channel="19" gain="0" mixdown="19" process="" source="19"/>
+			<pipeline channel="20" gain="0" mixdown="20" process="" source="20"/>
+			<pipeline channel="21" gain="0" mixdown="21" process="" source="21"/>
+			<pipeline channel="22" gain="0" mixdown="22" process="" source="22"/>
+			<pipeline channel="23" gain="0" mixdown="23" process="" source="23"/>
+			<pipeline channel="24" gain="0" mixdown="24" process="" source="24"/>
+			<pipeline channel="25" gain="0" mixdown="25" process="" source="25"/>
+			<pipeline channel="26" gain="0" mixdown="26" process="" source="26"/>
+			<pipeline channel="27" gain="0" mixdown="27" process="" source="27"/>
+			<pipeline channel="28" gain="0" mixdown="28" process="" source="28"/>
+			<pipeline channel="29" gain="0" mixdown="29" process="" source="29"/>
+			<pipeline channel="30" gain="0" mixdown="30" process="" source="30"/>
+			<pipeline channel="31" gain="0" mixdown="31" process="" source="31"/>
+		</matrix_profile>
+	</engine>
+	<upnp interface="auto">
+		<mime>
+			<type value="audio/ogg"/>
+			<type value="audio/vnd.wave"/>
+			<type value="audio/L32;rate=44100"/>
+			<type value="audio/L32;rate=48000"/>
+			<type value="audio/L32;rate=88200"/>
+			<type value="audio/L32;rate=96000"/>
+			<type value="audio/L32;rate=176400"/>
+			<type value="audio/L32;rate=192000"/>
+			<type value="audio/L32;rate=352800"/>
+			<type value="audio/L32;rate=384000"/>
+			<type value="audio/L32;rate=705600"/>
+			<type value="audio/L32;rate=768000"/>
+			<type value="audio/L24;rate=44100"/>
+			<type value="audio/L24;rate=48000"/>
+			<type value="audio/L24;rate=88200"/>
+			<type value="audio/L24;rate=96000"/>
+			<type value="audio/L24;rate=176400"/>
+			<type value="audio/L24;rate=192000"/>
+			<type value="audio/L24;rate=352800"/>
+			<type value="audio/L24;rate=384000"/>
+			<type value="audio/L24;rate=705600"/>
+			<type value="audio/L24;rate=768000"/>
+			<type value="audio/L16;rate=44100"/>
+			<type value="audio/L16;rate=48000"/>
+			<type value="audio/L16;rate=88200"/>
+			<type value="audio/L16;rate=96000"/>
+			<type value="audio/L16;rate=176400"/>
+			<type value="audio/L16;rate=192000"/>
+			<type value="audio/L16;rate=352800"/>
+			<type value="audio/L16;rate=384000"/>
+			<type value="audio/L16;rate=705600"/>
+			<type value="audio/L16;rate=768000"/>
+		</mime>
+	</upnp>
+</xml>
