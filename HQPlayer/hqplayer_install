@@ -18,7 +18,7 @@ cd ~/.config/Rygel
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/LibRygelRenderer.xml
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/LibRygelRenderer-v1.xml
 sed -i '/ldconfig/d' /opt/bootlocal.sh
-echo 'ldconfig' >> /opt/bootlocal.sh
+echo 'sudo ldconfig' >> /opt/bootlocal.sh
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
 cd ~/hqplayer
