@@ -16,7 +16,7 @@ sed -i '/ldconfig/d' /opt/bootlocal.sh
 echo 'sudo ldconfig' >> /opt/bootlocal.sh
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/library.xml
+#wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/library.xml
 cd ~/hqplayer
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd.xml
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd-auth.xml
