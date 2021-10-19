@@ -9,7 +9,9 @@ TARGET=`cat /etc/sysconfig/backup_device`
 tce-load -i ca-certificates.tcz
 tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz libgcrypt.tcz pcp-libsoxr.tcz
 
-cd /mnt/$TARGET/optional; rm pcp-shairportsync.tcz*
+cd /mnt/$TARGET/optional
+rm pcp-shairportsync.tcz*
+
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.dep
@@ -20,6 +22,8 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz.md5.txt
 
+sed -i '/ldconfig/d' /opt/bootlocal.sh
+echo ldconfig >>/opt/bootlocal.sh
 echo "Rebooting..."
 sleep 3
 pcp br
