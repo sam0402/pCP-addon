@@ -7,7 +7,7 @@
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
-sed -i '/hqplayer.tcz/d' onboot.lst
+sed -i '/hqplayer.tcz/d;/pcp-libflac.tcz/d' onboot.lst
 echo hqplayer.tcz >>onboot.lst
 echo pcp-libflac.tcz >>onboot.lst
 
