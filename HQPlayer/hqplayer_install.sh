@@ -27,7 +27,7 @@ cd ~/hqplayer
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd.xml
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd-auth.xml
 pcp_write_var_to_config USER_COMMAND_1 "%23sleep+240%3bpkill+-f+ssh%3bpkill+-f+udhcpc%3b+uhubctl+-l2+-a0"
-pcp_write_var_to_config USER_COMMAND_ ""
+pcp_write_var_to_config USER_COMMAND_2 ""
 pcp_write_var_to_config USER_COMMAND_3 ""
 
 echo "Rebooting..."
