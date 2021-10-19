@@ -26,8 +26,8 @@ mkdir -p ~/hqplayer/udev/rules.d
 cd ~/hqplayer
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd.xml
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd-auth.xml
-pcp_write_var_to_config USER_COMMAND_1 "%23sleep+240%3bpkill+-f+ssh%3bpkill+-f+udhcpc%3b+uhubctl+-l2+-a0"
-pcp_write_var_to_config USER_COMMAND_2 ""
+pcp_write_var_to_config USER_COMMAND_1 "%23sleep+60%3buhubctl+-l2+-a0%3bsleep+120%3bpkill+-f+httpd%3bumount+%2ftmp%2ftcloop%2fpcp-8.0.0-www"
+pcp_write_var_to_config USER_COMMAND_2 "sleep+180%3bif+%5b+%60pgrep+ssh+%7c+wc+-l%60+-lt+3+%5d%3bthen+pkill+-f+ssh%3bfi"
 pcp_write_var_to_config USER_COMMAND_3 ""
 
 echo "Rebooting..."
