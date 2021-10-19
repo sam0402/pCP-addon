@@ -9,7 +9,11 @@ TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
 sed -i '/hqplayer.tcz/d' onboot.lst
 echo hqplayer.tcz >>onboot.lst
+echo pcp-libalac.tcz >>onboot.lst
+
 cd optional
+sed -i '/pcp-squeezelite.tcz/d;/rng-tools.tcz/d;/dialog.tcz/d' pcp.tcz.dep
+sed -i '/glib2.tcz/d' libudev.tcz.dep
 tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer.tcz
 echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
