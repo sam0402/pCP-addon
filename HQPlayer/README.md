@@ -2,7 +2,7 @@ HQPlayer Embedded
 
 Script to install HQPlayer Embedded & NAA on piCorePlayer 7.x or later version.
 
-Login to PiCorePlayer using ssh, default login: tc password: piCore
+Login to iCorePlayer using ssh, default login: tc password: piCore
 
 To install HQPlayer Embedded, run:
 
