@@ -20,7 +20,7 @@ echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
 sed -i '/ldconfig/d;/hqplayerd/d' /opt/bootlocal.sh
 echo 'ldconfig' >>/opt/bootlocal.sh
 echo 'sudo -u tc hqplayerd &' >>/opt/bootlocal.sh
-echo 'taskset -p 0x00000008 $(pgrep hqplayerd*)' >>/opt/bootlocal.sh
+echo 'sudo -u taskset -p 0x00000008 $(pgrep hqplayerd*)' >>/opt/bootlocal.sh
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
 cd ~/hqplayer
