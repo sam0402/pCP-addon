@@ -25,7 +25,7 @@ then
 #--- Add by Sam0402
 ldconfig
 sudo -u tc hqplayerd &
-sleep 5
+sleep 3
 taskset -p 0x00000008 $(pgrep hqplayerd*)
 #--- Add by Sam0402
 EOL
