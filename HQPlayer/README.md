@@ -11,8 +11,6 @@ To install HQPlayer Embedded, run:
 
 Username: hqp, Password: hqpw
 
-　
-
 To install NAA, run:
 
 `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/naa_install.sh | sh`
