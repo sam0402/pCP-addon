@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer.
 sed -i '/ldconfig/d;/hqplayerd/d' /opt/bootlocal.sh
 echo 'ldconfig' >>/opt/bootlocal.sh
 echo 'sudo -u tc hqplayerd &' >>/opt/bootlocal.sh
-echo 'sudo -u taskset -p 0x00000008 $(pgrep hqplayerd*)' >>/opt/bootlocal.sh
+echo 'taskset -p 0x00000008 $(pgrep hqplayerd*)' >>/opt/bootlocal.sh
 # tc home
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
