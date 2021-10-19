@@ -12,9 +12,9 @@ To install armv8 version, run:
 
 `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer_install.sh | sh`
 
-username: hqp
+Username: hqp
 
-password: hqpw
+Password: hqpw
 
 　
 
