@@ -18,10 +18,19 @@ tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayer.tcz
 
 #echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
-sed -i '/ldconfig/d;/hqplayerd/d' /opt/bootlocal.sh
-echo 'ldconfig' >>/opt/bootlocal.sh
-echo 'sudo -u tc hqplayerd &' >>/opt/bootlocal.sh
-echo 'taskset -p 0x00000008 $(pgrep hqplayerd*)' >>/opt/bootlocal.sh
+sed -i '11,$d' /opt/bootlocal.sh
+if [ `grep -c 'hqplayerd' /opt/bootlocal.sh` -eq 0 ]
+then
+  cat << 'EOL' >> /opt/bootlocal.sh
+#--- Add by Sam0402
+ldconfig
+sudo -u tc hqplayerd &
+sleep 10
+taskset -p 0x00000008 $(pgrep hqplayerd*)
+#--- Add by Sam0402
+EOL
+fi
+
 # tc home
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
