@@ -9,7 +9,7 @@ TARGET=`cat /etc/sysconfig/backup_device`
 cd /mnt/$TARGET
 sed -i '/hqplayer.tcz/d' onboot.lst
 echo hqplayer.tcz >>onboot.lst
-echo pcp-libalac.tcz >>onboot.lst
+echo pcp-libflac.tcz >>onboot.lst
 
 cd optional
 sed -i '/pcp-squeezelite.tcz/d;/rng-tools.tcz/d;/dialog.tcz/d' pcp.tcz.dep
