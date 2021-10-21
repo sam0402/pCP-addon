@@ -9,6 +9,7 @@ sudo mount /mnt/mmcblk0p1
 cd /mnt/mmcblk0p1
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/modules-5.13.1-pcpEVL.gz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/kernel5131v8.img
+rm config.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/config.txt
 cd /mnt/$TARGET
 echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
