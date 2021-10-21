@@ -5,8 +5,8 @@
 
 useBusybox
 TARGET=`cat /etc/sysconfig/backup_device`
-m1
-c1
+sudo mount /mnt/mmcblk0p1
+cd /mnt/mmcblk0p1
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/modules-5.13.1-pcpEVL.gz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/kernel5131v8.img
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/config.txt
