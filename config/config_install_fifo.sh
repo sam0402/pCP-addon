@@ -30,3 +30,4 @@ umount /tmp/tcloop/uhubctl /tmp/tcloop/libusb /tmp/tcloop/libudev
 #--- Add by Sam0402
 EOL
 fi
+pcp rb
