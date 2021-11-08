@@ -13,7 +13,7 @@ rm config.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/config.txt
 cd /mnt/$TARGET
 echo 'http://repo.tinycorelinux.net/' >/opt/tcemirror
-tce-load -wi squashfs-tools openssl-dev libelf-dev libudev-dev libpci-dev bash compiletc autoconf libasound-dev 
+tce-load -wi squashfs-tools openssl-dev libelf-dev libudev-dev libpci-dev bash compiletc autoconf libasound-dev pcp-libsoxr-dev
 cd optional
 sed -i '/pcp-squeezelite.tcz/d' pcp.tcz.dep
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/config/filesystems-5.13.1-pcpEVL.tcz
