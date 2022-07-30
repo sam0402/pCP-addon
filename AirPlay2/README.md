@@ -4,8 +4,14 @@ Script to install Airplay2 on piCorePlayer OS
 
 2. Login to PiCorePlayer using ssh, default login: tc password: piCore
 
-run:
+Install method:
 
 $ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay2 | sh`
 
 Airplay2 will be installed after auto reboot.
+
+---
+
+Airplay Classic install method:
+
+$ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay_classic | sh`
