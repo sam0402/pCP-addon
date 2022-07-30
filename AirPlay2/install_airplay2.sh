@@ -19,8 +19,8 @@ wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz.md5.txt
 # wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.tcz
 # wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.tcz.md5.txt
-# wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz
-# wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz.md5.txt
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz.md5.txt
 
 sed -i '/ldconfig/d' /opt/bootlocal.sh
 echo ldconfig >>/opt/bootlocal.sh
