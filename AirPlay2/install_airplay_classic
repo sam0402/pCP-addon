@@ -15,7 +15,7 @@ rm pcp-shairportsync.tcz*
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.dep
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libopt.tcz
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libpopt.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libpopt.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig.tcz.md5.txt
