@@ -16,10 +16,8 @@ echo pcre.tcz >glib2.tcz.dep
 wget -O pcp-shairportsync.tcz https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync2.tcz
 wget -O pcp-shairportsync.tcz.md5.txt https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync2.tcz.md5.txt
 wget -O pcp-shairportsync.tcz.dep https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync2.tcz.dep
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig.tcz
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig.tcz.md5.txt
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libpopt.tcz
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libpopt.tcz.md5.txt
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libplist.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libsodium.tcz
