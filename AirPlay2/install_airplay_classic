@@ -25,4 +25,4 @@ sed -i '/ldconfig/d' /opt/bootlocal.sh
 echo ldconfig >>/opt/bootlocal.sh
 echo "Rebooting..."
 sleep 3
-#pcp br
+pcp br
