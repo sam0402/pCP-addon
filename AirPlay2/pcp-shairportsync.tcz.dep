@@ -2,5 +2,6 @@ libasound.tcz
 openssl.tcz
 pcp-libsoxr.tcz
 pcp-libalac.tcz
-libconfig_popt.tcz
+libconfig.tcz
+libpopt.tcz
 libdaemon.tcz
