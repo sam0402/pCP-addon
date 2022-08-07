@@ -1,6 +1,5 @@
 libasound.tcz
 openssl.tcz
 pcp-libalac.tcz
-libconfig.tcz
-libpopt.tcz
+libconfig_popt.tcz
 libdaemon.tcz
