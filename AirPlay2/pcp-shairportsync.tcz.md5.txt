@@ -1,1 +1,1 @@
-ea066ef739b3d1cfb8cc48f17ad20735  pcp-shairportsync.tcz
+3abc67f67bd02c2e623e728c981db299  pcp-shairportsync.tcz
