@@ -11,6 +11,7 @@ tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpe
 
 cd /mnt/$TARGET/optional
 rm pcp-shairportsync.tcz* libSM.tcz* libX11.tcz* libXau.tcz* libXdmcp.tcz* libxcb.tcz*
+echo expat2.tcz >dbus.tcz.dep
 
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.md5.txt
