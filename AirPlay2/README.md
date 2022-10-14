@@ -14,4 +14,8 @@ Airplay2 will be installed after auto reboot.
 
 Airplay Classic install method:
 
-$ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay_classic | sh`
+$ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay_classic | sh` 
+
+Ignore volume control
+
+$ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay_classic_ignore_vol_ctl | sh`
