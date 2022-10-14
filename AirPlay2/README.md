@@ -8,6 +8,10 @@ Install method:
 
 $ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay2 | sh`
 
+Ignore volume control
+
+$ `wget -O - https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/install_airplay2_ignore_vol_ctl | sh`
+
 Airplay2 will be installed after auto reboot.
 
 ---
