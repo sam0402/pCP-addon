@@ -1,0 +1,27 @@
+#!/bin/busybox ash
+
+. /etc/init.d/tc-functions
+. /var/www/cgi-bin/pcp-functions
+
+useBusybox
+TARGET=`cat /etc/sysconfig/backup_device`
+tce-load -i ca-certificates.tcz
+tce-load -wi pcp-shairportsync.tcz avahi.tcz libavahi.tcz glib2.tcz pcp-libffmpeg.tcz pcp-libalac.tcz libdaemon.tcz
+
+cd /mnt/$TARGET/optional
+rm pcp-shairportsync.tcz* libSM.tcz* libX11.tcz* libXau.tcz* libXdmcp.tcz* libxcb.tcz* gamin.tcz* libelf.tcz*
+echo expat2.tcz >dbus.tcz.dep
+echo pcre.tcz >glib2.tcz.dep
+
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync_igvolctl.tcz
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync_igvolctl.tcz.md5.txt
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.dep
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz
+wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz.md5.txt
+mv pcp-shairportsync_igvolctl.tcz pcp-shairportsync.tcz
+mv pcp-shairportsync_igvolctl.tcz.md5.txt pcp-shairportsync.tcz.md5.txt
+sed -i '/ldconfig/d' /opt/bootlocal.sh
+echo ldconfig >>/opt/bootlocal.sh
+echo "Rebooting..."
+sleep 3
+pcp br
