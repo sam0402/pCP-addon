@@ -13,13 +13,11 @@ rm pcp-shairportsync.tcz* libSM.tcz* libX11.tcz* libXau.tcz* libXdmcp.tcz* libxc
 echo expat2.tcz >dbus.tcz.dep
 echo pcre.tcz >glib2.tcz.dep
 
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync_igvolctl.tcz
-wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync_igvolctl.tcz.md5.txt
+wget -O pcp-shairportsync.tcz https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync_igvolctl.tcz
+wget -O pcp-shairportsync.tcz.md5.txt https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync_igvolctl.tcz.md5.txt
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/pcp-shairportsync.tcz.dep
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/AirPlay2/libconfig_popt.tcz.md5.txt
-mv pcp-shairportsync_igvolctl.tcz pcp-shairportsync.tcz
-mv pcp-shairportsync_igvolctl.tcz.md5.txt pcp-shairportsync.tcz.md5.txt
 sed -i '/ldconfig/d' /opt/bootlocal.sh
 echo ldconfig >>/opt/bootlocal.sh
 echo "Rebooting..."
